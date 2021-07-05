@@ -1,0 +1,8 @@
+﻿  XboxModule.cpp
+c1xx : warning C4199: two-phase name lookup is not supported for C++/CLI, C++/CX, or OpenMP; use /Zc:twoPhase-
+d:\uni work\yr 3 tri 2\mtrn3500\ass2\vehicle_system\xboxmodule\xboxmodule.cpp(86): warning C4244: '=': conversion from 'double' to 'short', possible loss of data
+d:\uni work\yr 3 tri 2\mtrn3500\ass2\vehicle_system\xboxmodule\xboxmodule.cpp(87): warning C4244: '=': conversion from 'double' to 'short', possible loss of data
+d:\uni work\yr 3 tri 2\mtrn3500\ass2\vehicle_system\xboxmodule\xboxmodule.cpp(122): warning C4244: '=': conversion from 'double' to 'short', possible loss of data
+d:\uni work\yr 3 tri 2\mtrn3500\ass2\vehicle_system\xboxmodule\xboxmodule.cpp(123): warning C4244: '=': conversion from 'double' to 'short', possible loss of data
+  SMObject.obj : /DEBUG:FASTLINK is not supported when managed code is present; restarting link with /DEBUG:FULL
+  XboxModule.vcxproj -> D:\uni work\Yr 3 Tri 2\MTRN3500\ass2\Vehicle_System\XboxModule\..\Executables\XboxModule.exe
