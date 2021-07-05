@@ -1,0 +1,26 @@
+#!/bin/bash
+
+unset CDPATH
+name="`readlink -f $0`"
+base_dir=$(dirname $(dirname $(readlink -f "$0")))
+
+case "$base_dir" in
+*/[0-9][0-9][sx][12]) ;;
+*) base_dir=/web/cs1511/   # give copies this script to /tmp so when run this way we have to assume the class dir is /web/cs1511/
+esac
+
+export PATH="/usr/local/bin:/usr/bin:/bin:/sbin:/sbin:/usr/sbin:$PATH"
+export PYTHONPATH="$base_dir/lib/python:$PYTHONPATH"
+export LANG=en_AU.UTF-8  
+export LANGUAGE=en_AU:en  
+export LC_ALL=en_AU.UTF-8  
+export LC_COLLATE=POSIX
+
+set -o pipefail
+case "$0" in
+*dryrun)
+	$base_dir/lib/python/cse/autotest.py "$@" 2>&1 | tee "!dryrun_record"
+	;;
+*)
+	$base_dir/lib/python/cse/autotest.py "$@"
+esac
