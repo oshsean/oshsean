@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="limited" default="false"  doc="If true, limits joint range [-PI, PI] on all joints." />
+  <arg name="paused" default="false" doc="Starts gazebo in paused mode" />
+  <arg name="gui" default="true" doc="Starts gazebo gui" />
+  
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find armee_world)/worlds/Armee.world"/>
+    <!-- <arg name="world_name" default="worlds/empty.world"/> -->
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gui)"/>
+  </include>
+
+  <!-- load robot descripton -->
+<!--
+  <param  name="robot_description" command="$(find xacro)/xacro '$(find armee_world)/urdf/robot_description.urdf.xacro'"/>
+-->
+  <!-- push robot_description to factory and spawn robot in gazebo -->
+<!--
+  <node name="spawn_robot_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -z 0.1" respawn="false" output="screen" />
+-->
+  <!-- load camera descripton -->
+  <param name="camera_description" command="$(find xacro)/xacro '$(find armee_world)/urdf/camera_description.urdf.xacro'" />
+ 
+  <!-- push camera_description to factory and spawn robot in gazebo -->
+  <node name="spawn_camera_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param camera_description -model camera -z 0.1" respawn="false" output="screen" />
+
+  <!--<node
+    pkg="armee_world"
+    type="spawn_counters"
+    name="spawn_counters"
+    output="screen"
+  /
+<include file="$(find controller)/launch/ur5e_epick_moveit_planning_execution.launch"/>>-->
+
+</launch>

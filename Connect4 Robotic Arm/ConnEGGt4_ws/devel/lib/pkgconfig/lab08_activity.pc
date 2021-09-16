@@ -1,0 +1,8 @@
+prefix=/home/mtrn4230/major-project-armee/ConnEGGt4_ws/devel
+
+Name: lab08_activity
+Description: Description of lab08_activity
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

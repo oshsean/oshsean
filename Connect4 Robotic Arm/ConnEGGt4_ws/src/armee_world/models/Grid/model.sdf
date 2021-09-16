@@ -1,0 +1,120 @@
+<?xml version="1.0" ?>
+<sdf version="1.5">
+  <model name="Grid">
+    <static>true</static>
+    <link name="link">
+
+      <collision name="Base">
+        <pose>0 0 -0.17 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.485 0.0129 0.065</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="Front">
+        <pose>0 -0.0043 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.485 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="Back">
+        <pose>0 0.0043 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.485 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="Left">
+        <pose>-0.2375 0 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.0175 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="Right">
+        <pose>0.2375 0 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.0175 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <collision name="InnerCol1">
+        <pose>0.1625 0 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="InnerCol2">
+        <pose>0.0975 0 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="InnerCol3">
+        <pose>0.0325 0 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+     <collision name="InnerCol4">
+        <pose>-0.0325 0 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="InnerCol5">
+        <pose>-0.0975 0 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name="InnerCol6">
+        <pose>-0.1625 0 0.03 0 0 0</pose>
+        <geometry>
+          <box>
+            <size>0.005 0.0043 0.34</size>
+          </box>
+        </geometry>
+      </collision>
+
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://Grid/FinalGrid.dae</uri>
+          </mesh>
+        </geometry>
+        <material>
+            <lighting>1</lighting>
+            <script>
+              <uri>file://media/materials/scripts/gazebo.material</uri>
+              <name>Gazebo/Blue</name>
+            </script>
+            <shader type='vertex'>
+              <normal_map>__default__</normal_map>
+            </shader>
+        </material>
+      </visual>
+    </link>
+  </model>
+</sdf>

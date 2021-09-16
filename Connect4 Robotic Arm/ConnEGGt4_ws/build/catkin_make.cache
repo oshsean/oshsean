@@ -1,0 +1,2 @@
+armee_world:pubsandsubs:ur5e_epick_moveit_config:ur_description:ur_kinematics
+-DCATKIN_DEVEL_PREFIX=/home/mtrn4230/major-project-armee/ConnEGGt4_ws/devel -DCMAKE_INSTALL_PREFIX=/home/mtrn4230/major-project-armee/ConnEGGt4_ws/install -G Unix Makefiles

@@ -1,0 +1,7 @@
+set(pubsandsubs_SETUP_PY_SETUP_MODULE "distutils.core")
+set(pubsandsubs_SETUP_PY_VERSION "0.0.0")
+set(pubsandsubs_SETUP_PY_SCRIPTS "")
+set(pubsandsubs_SETUP_PY_PACKAGES "pubsandsubs")
+set(pubsandsubs_SETUP_PY_PACKAGE_DIRS "src/pubsandsubs")
+set(pubsandsubs_SETUP_PY_MODULES "")
+set(pubsandsubs_SETUP_PY_MODULE_DIRS "")

@@ -1,0 +1,8 @@
+prefix=/home/mtrn4230/major-project-armee/ConnEGGt4_ws/devel
+
+Name: pubsandsubs
+Description: Description of pubsandsubs
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/mtrn4230/major-project-armee/ConnEGGt4_ws/devel
+
+Name: armee_world
+Description: Description of armee_world
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: moveit_core moveit_ros_planning_interface

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="camera" >
+ 
+  <!-- Include camera description (Hint: look at camera_model.urdf.xacro within the lab08_activity package) -->
+  <!-- TODO: INSERT CODE HERE -->
+  <xacro:include filename="$(find armee_world)/urdf/camera_model.xacro"/>
+
+
+  <link name="world" />
+
+  <!-- Link camera with world joint -->
+  <!-- TODO: INSERT CODE HERE -->
+  <joint name="camera_joint" type="fixed">
+	<parent link="world" />
+	<child link="camera_link" />
+	<origin xyz="1.2 -0.593 1.675" rpy="0.0 ${pi/2} ${pi}" />
+
+  </joint>
+  
+</robot>

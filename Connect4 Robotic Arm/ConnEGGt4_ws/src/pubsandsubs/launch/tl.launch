@@ -1,0 +1,14 @@
+<launch>
+  <node
+    pkg="pubsandsubs"
+    type="talker.py"
+    name="talker"
+    output="screen"
+  />
+  <node
+    pkg="pubsandsubs"
+    type="listener.py"
+    name="listener"
+    output="screen"
+  />
+</launch> 
